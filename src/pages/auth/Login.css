@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+.login_page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+}
+.fxt-shape.fxt-animation-active {
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.header_logo_name h5 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+.hand_shape {
+  position: absolute;
+  bottom: -3%;
+  right: 0;
+  opacity: 0.3;
+  animation: float-bob-y 3s infinite linear;
+}
+@keyframes float-bob-y {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.events-column {
+  position: relative;
+  background-color: rgba(9, 64, 194, 0.85);
+  padding: 40px 50px;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.events-container {
+  height: 24rem;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(
+    to bottom,
+    #0000001f 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #0000001f 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  backdrop-filter: blur(50px);
+}
+
+.eventShape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+.events-list {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 20s linear infinite;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.events-container:hover .events-list {
+  animation-play-state: paused;
+}
+
+.event-item {
+  position: relative;
+  padding: 0.75rem 1.25rem 0.75rem 3rem;
+  margin-bottom: 0.5rem;
+  background: #ffffff29;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+}
+
+.event_icon {
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #001d62;
+  border-radius: 50%;
+}
+
+.event_icon svg {
+  font-size: 0.875rem;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+.form_box {
+  box-shadow: 0 3px 79px 0 rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 50px;
+}
+
+@media (max-width: 767px) {
+  .events-container {
+    height: 18rem;
+  }
+
+  .event-item {
+    font-size: 1rem;
+    padding-left: 2.5rem;
+  }
+
+  .event_icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+.login_page::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/login-bg.png") center/cover;
+  opacity: .1;
+}
+.bg_add {
+    background: rgb(255 255 255 / 10%);
+    position: relative;
+    box-shadow: 0px 0px 0px 0px #fff;
+}
+.events_form{
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Loader animation for login button */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.login-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-loader .loader-text {
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+/* Header button styles */
+.header-button {
+  background-color: #1b53d4;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-transform: none;
+}
+
+.header-button:hover {
+  background-color: #1b53d4;
+}

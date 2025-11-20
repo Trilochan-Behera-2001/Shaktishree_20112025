@@ -1,0 +1,20 @@
+.titel_hdng{
+    margin-bottom: 0;
+    position: relative;
+    color: #226ded;
+    font-size: 17px;
+    font-weight: 600;
+    width: fit-content;
+    padding-bottom: 20px;
+}
+.titel_hdng:after {
+    content: "";
+    background: #226ded87;
+    height: 2px;
+    width: 55%;
+    left: 0%;
+    bottom: 10px;
+    position: absolute;
+    /* transform: translateX(-50%); */
+    border-radius: 50%;
+}

@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+body{
+  background:#fff ;
+}
+
+.paper-padding {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.header-title {
+     color: #0b7ffe !important;
+    font-size: 18px !important;
+    letter-spacing: 0.5px !important;
+    font-weight: 500 !important;
+    margin-bottom: 16px !important;
+}
+
+
+
+.flex-gap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}

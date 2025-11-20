@@ -1,0 +1,40 @@
+.quiz-creator-category-select .react-select__control {
+  height: 40px !important;
+  min-height: 40px !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
+.quiz-creator-category-select .react-select__value-container {
+  height: 40px !important;
+  min-height: 40px !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  flex-wrap: nowrap !important;
+}
+
+.quiz-creator-category-select .react-select__multi-value {
+  min-width: fit-content !important;
+}
+
+/* Ensure scrollbars are visible when needed */
+.quiz-creator-category-select .react-select__control::-webkit-scrollbar,
+.quiz-creator-category-select .react-select__value-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.quiz-creator-category-select .react-select__control::-webkit-scrollbar-track,
+.quiz-creator-category-select .react-select__value-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.quiz-creator-category-select .react-select__control::-webkit-scrollbar-thumb,
+.quiz-creator-category-select .react-select__value-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.quiz-creator-category-select .react-select__control::-webkit-scrollbar-thumb:hover,
+.quiz-creator-category-select .react-select__value-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

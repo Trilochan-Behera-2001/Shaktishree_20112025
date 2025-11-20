@@ -1,0 +1,91 @@
+/* Mobile Scroll Effects */
+@media (max-width: 768px) {
+  .scroll-effect-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scroll-effect-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: scroll-shimmer 1.5s infinite;
+    z-index: 1;
+  }
+
+  @keyframes scroll-shimmer {
+    0% {
+      left: -100%;
+    }
+    20% {
+      left: -50%;
+    }
+    50% {
+      left: 0%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .scroll-effect-mobile {
+    animation: scroll-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes scroll-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Mobile chart container animation */
+  .chart-container-mobile {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .chart-container-mobile.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop animations */
+.chart-container-desktop {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.chart-container-desktop.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation delays */
+.animation-delay-150 {
+  animation-delay: 0.15s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
