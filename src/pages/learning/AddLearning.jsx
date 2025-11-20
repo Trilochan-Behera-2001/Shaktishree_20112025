@@ -654,6 +654,8 @@ const AddLearning = () => {
         });
       }
 
+      
+
       if (video.languages && Array.isArray(video.languages)) {
         video.languages.forEach((lang, lIndex) => {
           const languageObj = Language.find((l) => l.languageId === lang.lang);
